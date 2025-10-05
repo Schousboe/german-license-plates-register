@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="da">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tyske Nummerplader</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+  <div class="container">
+    <h1>Indtast en byforkortelse!</h1>
+    <input id="input" placeholder="Fx HH, B, M" />
+    <button onclick="findCity()">Søg</button>
+    <div id="result" class="result"></div>
+    <div id="error" class="error"></div>
+  </div>
 
+<script src="script.js"> </script>
+  
+</body>
 </html>

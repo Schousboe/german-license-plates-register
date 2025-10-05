@@ -2,3 +2,102 @@ html {
   height: 100%;
   width: 100%;
 }
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+input {
+  width: 90%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #5C6BC0;
+  outline: none;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(120deg, #5C6BC0, #7986CB);
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewX(-20deg);
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+button:hover::before {
+  animation: shine 0.7s ease forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+.result {
+  margin-top: 1.5rem;
+  font-weight: 500;
+  color: #2C6E49;
+}
+
+.error {
+  margin-top: 1rem;
+  color: #D32F2F;
+}
