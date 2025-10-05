@@ -4,7 +4,6 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)]()
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Made With](https://img.shields.io/badge/Made%20with-Vanilla%20JS-blue.svg)]()
 
 A lightweight web application that allows users to look up German license plate abbreviations and find out which **city or district** they represent.
 
@@ -38,19 +37,21 @@ Users can enter a license plate abbreviation (for example, `HH`, `B`, or `M`) an
 
 ## Project Structure
 
-german-license-plates/
-├── index.html # Main webpage
-├── style.css # Stylesheet
-├── script.js # Application logic
-└── nummerplader.json # JSON dataset containing license plate abbreviations
+german-license-plates-register /<br/>
+├── [index.html](index.html) <br/>
+├── [style.css](style.css)  <br/>
+├── [script.js](script.js)  <br/>
+└── [nummerplader.json](nummerplader.json)  <br/>
 
 ---
 
 ## Usage
 
 1. **Clone the repository**
+   
    ```bash
    git clone https://github.com/Schousboe/german-license-plates.git
+   
    cd german-license-plates
    
 Open index.html in your browser.
@@ -84,8 +85,8 @@ if (data[input]) {
 
 - Implement autocomplete or live suggestions for abbreviations
 
-- Host the dataset as a public API
-
+- Implement different languages
+- 
 - Improve mobile responsiveness and accessibility
 
 - Include additional metadata such as federal state or region
@@ -94,7 +95,7 @@ if (data[input]) {
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 You are free to use, modify, and distribute it for personal or commercial purposes.
 
 ---
