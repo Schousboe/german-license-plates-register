@@ -49,17 +49,18 @@ german-license-plates-register /<br/>
 
 1. **Clone the repository**
    
-```bash
-git clone https://github.com/Schousboe/german-license-plates.git
-   
-cd german-license-plates
-```
+   ```bash
+   git clone https://github.com/Schousboe/german-license-plates.git
+      
+   cd german-license-plates
+   ```
    
 2. **Open index.html in your browser.**
    
-You can simply double-click the file or serve it locally.
+   You can simply double-click the file or serve it locally.
 
-3. **Enter a license plate abbreviation and the result will be displayed immediately.**
+3. **Enter a license plate abbreviation and the result will be displayed immediately.** <br/>
+<br/>
 
 > [!TIP]
 > If the search doesn't work when opening index.html directly, try serving the folder using a local HTTP server (e.g., `python -m http.server`) so that JSON fetch requests work properly.
