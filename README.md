@@ -61,6 +61,9 @@ You can simply double-click the file or serve it locally.
 
 3. **Enter a license plate abbreviation and the result will be displayed immediately.**
 
+> [!TIP]
+> If the search doesn't work when opening index.html directly, try serving the folder using a local HTTP server (e.g., `python -m http.server`) so that JSON fetch requests work properly.
+
 ---
 
 ## How It Works
