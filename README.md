@@ -49,15 +49,17 @@ german-license-plates-register /<br/>
 
 1. **Clone the repository**
    
-   ```bash
-   git clone https://github.com/Schousboe/german-license-plates.git
+```bash
+git clone https://github.com/Schousboe/german-license-plates.git
    
-   cd german-license-plates
+cd german-license-plates
+```
    
-Open index.html in your browser.
+2. **Open index.html in your browser.**
+   
 You can simply double-click the file or serve it locally.
 
-Enter a license plate abbreviation and the result will be displayed immediately.
+3. **Enter a license plate abbreviation and the result will be displayed immediately.**
 
 ---
 
