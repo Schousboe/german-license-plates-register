@@ -52,9 +52,9 @@ german-license-plates-register /<br/>
 1. **Clone the repository**
    
    ```bash
-   git clone https://github.com/Schousboe/german-license-plates.git
+   git clone https://github.com/Schousboe/german-license-plates-register.git
       
-   cd german-license-plates
+   cd german-license-plates-register
    ```
    
 2. **Open index.html in your browser.**
