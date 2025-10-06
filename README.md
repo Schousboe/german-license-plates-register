@@ -41,6 +41,8 @@ german-license-plates-register /<br/>
 ├── [index.html](index.html) <br/>
 ├── [style.css](style.css)  <br/>
 ├── [script.js](script.js)  <br/>
+├── [README.md](README.md) <br/>
+├── [LICENSE](LICENSE) <br/>
 └── [nummerplader.json](nummerplader.json)  <br/>
 
 ---
