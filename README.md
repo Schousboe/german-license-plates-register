@@ -95,7 +95,7 @@ if (data[input]) {
 - Implement autocomplete or live suggestions for abbreviations
 
 - Implement different languages
-- 
+  
 - Improve mobile responsiveness and accessibility
 
 - Include additional metadata such as federal state or region
