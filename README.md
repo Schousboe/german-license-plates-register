@@ -73,12 +73,13 @@ Enter a license plate abbreviation and the result will be displayed immediately.
 
 Example:
 
+```
 if (data[input]) {
-  result.textContent = `${input} stands for ${data[input]}`;
+  result.textContent = ${input} stands for ${data[input]};
 } else {
-  error.textContent = `Unknown abbreviation. Please check your spelling.`;
+  error.textContent = Unknown abbreviation. Please check your spelling.;
 }
-
+```
 ---
 
 ## Future Improvements
