@@ -92,13 +92,13 @@ if (data[input]) {
 
 ## Future Improvements
 
-- Implement autocomplete or live suggestions for abbreviations
+- [ ] Implement autocomplete or live suggestions for abbreviations
 
-- Implement different languages
+- [x] Implement different languages
   
-- Improve mobile responsiveness and accessibility
+- [ ] Improve mobile responsiveness and accessibility
 
-- Include additional metadata such as federal state or region
+- [ ] Include additional metadata such as federal state or region
 
 ---
 
