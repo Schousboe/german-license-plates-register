@@ -111,6 +111,6 @@ You are free to use, modify, and distribute it for personal or commercial purpos
 
 ## Author
 
-Developed by: Schousboe development
-Language: Danish
-Purpose: Educational and reference project for identifying German vehicle registration codes.
+Developed by: Schousboe development <br/>
+Language: Danish <br/>
+Purpose: Educational and reference project for identifying German vehicle registration codes. <br/>
