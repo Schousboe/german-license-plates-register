@@ -112,5 +112,5 @@ You are free to use, modify, and distribute it for personal or commercial purpos
 ## Author
 
 **Developed by:** Schousboe development <br/>
-**Language:** Danish, english <br/>
+**Language:** Danish, english and german <br/>
 **Purpose:** Educational and reference project for identifying German vehicle registration codes. <br/>
