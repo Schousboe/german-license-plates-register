@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tyske Nummerplader</title>
+  <title>German License Plates</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <div class="language-switcher">
-      <div class="flag-bar">
-        <button onclick="setLanguage('en')" class="flag-btn">🇬🇧</button>
-        <button onclick="setLanguage('da')" class="flag-btn">🇩🇰</button>
-        <button onclick="setLanguage('de')" class="flag-btn">🇩🇪</button>
-      </div>
+      <select id="languageDropdown" class="language-dropdown" onchange="setLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="da">Dansk</option>
+        <option value="de">Deutsch</option>
+      </select>
     </div>
-    <h1>Indtast en byforkortelse!</h1>
-    <input id="input" placeholder="Fx HH, B, M" />
-    <button id="searchButton" onclick="findCity()">Søg</button>
+    <h1>Enter a city abbreviation</h1>
+    <input id="input" placeholder="e.g. HH, B, M" />
+    <button id="searchButton" onclick="findCity()">Search</button>
     <div id="result" class="result"></div>
     <div id="error" class="error"></div>
   </div>
