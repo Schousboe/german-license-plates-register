@@ -3,6 +3,7 @@
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)]()
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)]()
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)]()
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 A lightweight web application that allows users to look up German license plate abbreviations and find out which **city or district** they represent.
@@ -30,7 +31,8 @@ Users can enter a license plate abbreviation (for example, `HH`, `B`, or `M`) an
 
 - **HTML5** – Structure and markup  
 - **CSS3** – Styling and layout  
-- **Vanilla JavaScript** – Core logic and interactivity  
+- **Vanilla JavaScript** – Core logic and interactivity
+- **Node.js** - For starting up the HTTPS server
 - **JSON** – Data source for license plate codes  
 
 ---
@@ -43,7 +45,9 @@ german-license-plates-register /<br/>
 ├── [script.js](script.js)  <br/>
 ├── [README.md](README.md) <br/>
 ├── [LICENSE](LICENSE) <br/>
-└── [nummerplader.json](nummerplader.json)  <br/>
+├── [server.js](server.js) <br/>
+├── [.gitignore](.gitignore) <br/>
+└── [numberplates.json](numberplates.json)  <br/>
 
 ---
 
@@ -53,7 +57,7 @@ german-license-plates-register /<br/>
    
    ```bash
    git clone https://github.com/Schousboe/german-license-plates-register.git
-      
+   &&
    cd german-license-plates-register
    ```
    
@@ -77,7 +81,7 @@ german-license-plates-register /<br/>
   
 4. **Open your web browser**
 
-  Open [https://localhost:8443](https://localhost:8443) in your browser.
+     Open [https://localhost:8443](https://localhost:8443) in your browser.
 
 
 5. **Enter a license plate abbreviation and the result will be displayed immediately.** 
@@ -116,6 +120,8 @@ if (data[input]) {
 - [ ] Improve mobile responsiveness and accessibility
 
 - [ ] Include additional metadata such as federal state or region
+
+- [ ] Better project structure
 
 ---
 
