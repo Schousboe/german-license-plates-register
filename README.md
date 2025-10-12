@@ -57,15 +57,32 @@ german-license-plates-register /<br/>
    cd german-license-plates-register
    ```
    
-2. **Open index.html in your browser.**
+2. **Generate a SSL certificate (Only the first time)**
+
+    ```bash
+   openssl req -nodes -new -x509 -keyout server.key -out server.cert
+    ```
+   You can just press "." and enter to all the questions asked.
+
+
+3. **Start a local HTTPS server**
    
-   You can simply double-click the file or serve it locally.
+   ```bash
+   node server.js
+   ```
+   The terminal should display:
+    ```bash
+   HTTPS Server running at https://localhost:8443
+    ```
+  
+4. **Open your web browser**
 
-3. **Enter a license plate abbreviation and the result will be displayed immediately.** <br/>
-<br/>
+  Open [https://localhost:8443](https://localhost:8443) in your browser.
 
-> [!TIP]
-> If the search doesn't work when opening index.html directly, try serving the folder using a local HTTP server (e.g., `python -m http.server`) so that JSON fetch requests work properly.
+
+5. **Enter a license plate abbreviation and the result will be displayed immediately.** 
+  
+    Enter an abbreviation like `B` for Berlin or `M` for Munich and click "Search" and watch the magic happen!
 
 ---
 
