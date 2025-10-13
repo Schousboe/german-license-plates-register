@@ -20,6 +20,9 @@ Changes that have been merged into the main branch but not yet included in a tag
 - Deleted nummerplader.json for the numberplates.json
 - Changed nummerplader.json -> numberplates.json for clarity and updated references in codebase
 
+### Continuous Integration
+- Added automatic release workflow
+
 ### Documentation updates
 - Updated README.md to include changes
 - Added that i made the CHANGELOG.md file [changelog update]
@@ -41,6 +44,8 @@ Changes that have been merged into the main branch but not yet included in a tag
 
 ### Tests
 - CHANGELOG.md automation test [changelog update]
+
+
 
 
 

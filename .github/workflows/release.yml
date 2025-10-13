@@ -1,0 +1,106 @@
+name: Create GitHub Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*' # triggers when you push a tag like v1.0.0
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate release body from CHANGELOG
+        id: build
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/}
+          DATE=$(date +'%Y-%m-%d')
+
+          # Extract changelog section for this version
+          awk "/## \\[${VERSION}\\]/,/## \\[/" CHANGELOG.md | head -n -1 > TMP_CHANGELOG.md || \
+          awk "/## \\[${VERSION}\\]/,0" CHANGELOG.md > TMP_CHANGELOG.md
+
+          # --- Header ---
+          echo "[![Release](https://img.shields.io/badge/version-${VERSION}-blue.svg)]" > RELEASE_BODY.md
+          echo "[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)" >> RELEASE_BODY.md
+          echo "" >> RELEASE_BODY.md
+          echo "**Release date:** ${DATE}" >> RELEASE_BODY.md
+          echo "" >> RELEASE_BODY.md
+          echo "---" >> RELEASE_BODY.md
+          echo "---" >> RELEASE_BODY.md
+          echo "" >> RELEASE_BODY.md
+          echo "# What's changed?" >> RELEASE_BODY.md
+          echo "" >> RELEASE_BODY.md
+
+          # --- Parse commits from changelog section ---
+          FEATURES=$(grep -E '^[-*] feat:' TMP_CHANGELOG.md || true)
+          FIXES=$(grep -E '^[-*] fix:' TMP_CHANGELOG.md || true)
+          CHORES=$(grep -E '^[-*] chore:' TMP_CHANGELOG.md || true)
+          REFACTORS=$(grep -E '^[-*] refactor:' TMP_CHANGELOG.md || true)
+          DOCS=$(grep -E '^[-*] docs:' TMP_CHANGELOG.md || true)
+
+          if [ -n "$FEATURES" ]; then
+            echo "## Features" >> RELEASE_BODY.md
+            echo "$FEATURES" >> RELEASE_BODY.md
+            echo "" >> RELEASE_BODY.md
+          fi
+          if [ -n "$FIXES" ]; then
+            echo "## Fixes" >> RELEASE_BODY.md
+            echo "$FIXES" >> RELEASE_BODY.md
+            echo "" >> RELEASE_BODY.md
+          fi
+          if [ -n "$CHORES" ]; then
+            echo "## Chores" >> RELEASE_BODY.md
+            echo "$CHORES" >> RELEASE_BODY.md
+            echo "" >> RELEASE_BODY.md
+          fi
+          if [ -n "$REFACTORS" ]; then
+            echo "## Refactors" >> RELEASE_BODY.md
+            echo "$REFACTORS" >> RELEASE_BODY.md
+            echo "" >> RELEASE_BODY.md
+          fi
+          if [ -n "$DOCS" ]; then
+            echo "## Documentation" >> RELEASE_BODY.md
+            echo "$DOCS" >> RELEASE_BODY.md
+            echo "" >> RELEASE_BODY.md
+          fi
+
+          echo "---" >> RELEASE_BODY.md
+          echo "---" >> RELEASE_BODY.md
+          echo "" >> RELEASE_BODY.md
+          echo "# File Changes" >> RELEASE_BODY.md
+          echo "" >> RELEASE_BODY.md
+
+          # --- File diffs (added / changed / deleted) ---
+          ADDED=$(git diff --name-only --diff-filter=A HEAD^ HEAD || true)
+          CHANGED=$(git diff --name-only --diff-filter=M HEAD^ HEAD || true)
+          DELETED=$(git diff --name-only --diff-filter=D HEAD^ HEAD || true)
+
+          if [ -n "$ADDED" ]; then
+            echo "## Added" >> RELEASE_BODY.md
+            echo "$ADDED" | sed 's/^/- /' >> RELEASE_BODY.md
+            echo "" >> RELEASE_BODY.md
+          fi
+          if [ -n "$CHANGED" ]; then
+            echo "## Changed" >> RELEASE_BODY.md
+            echo "$CHANGED" | sed 's/^/- /' >> RELEASE_BODY.md
+            echo "" >> RELEASE_BODY.md
+          fi
+          if [ -n "$DELETED" ]; then
+            echo "## Deleted" >> RELEASE_BODY.md
+            echo "$DELETED" | sed 's/^/- /' >> RELEASE_BODY.md
+            echo "" >> RELEASE_BODY.md
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          body_path: RELEASE_BODY.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
