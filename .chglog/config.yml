@@ -1,0 +1,42 @@
+style: github
+template: CHANGELOG.tpl.md
+info:
+  title: CHANGELOG
+  repository_url: https://github.com/Schousboe/german-license-plates-register
+options:
+  commits:
+      filters:
+        Type:
+        - feat
+        - fix
+        - perf
+        - refactor
+        - docs
+        - test
+        - chore
+        - build
+        - ci
+        - revert
+  commit_groups:
+      sort_by: Title
+      group_by: Type
+
+      title_maps:
+        feat: Features
+        fix: Bug Fixes
+        perf: Performance Improvements
+        refactor: Code Refactoring
+        docs: Documentation
+        test: Tests
+        chore: Chores
+        build: Build System
+        ci: Continuous Integration
+        revert: Reverts
+  header:
+    pattern: "^(\\w*)\\:\\s(.*)$"
+    pattern_maps:
+      - Type
+      - Subject
+  notes:
+    keywords:
+      - BREAKING CHANGE
