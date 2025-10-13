@@ -21,6 +21,7 @@ Changes that have been merged into the main branch but not yet included in a tag
 - Changed nummerplader.json -> numberplates.json for clarity and updated references in codebase
 
 ### Documentation
+- Made CHANGELOG.md with a CHANGELOG.tpl.md template
 - Made README.md up-to-date with the latest changes in the repo
 - Added german as language in the 'Author' section in README.md
 - Made details in the Author section in README.md bold and updated language
@@ -31,6 +32,12 @@ Changes that have been merged into the main branch but not yet included in a tag
 - Added a dropdown  for language change and set english as standard language
 - Added HTTPS server setup and update documentation
 - Language switcher added; Danish, English, German
+
+### Tests
+- CHANGELOG.md automation test
+
+
+
 
 
 
