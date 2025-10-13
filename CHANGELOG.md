@@ -21,6 +21,7 @@ Changes that have been merged into the main branch but not yet included in a tag
 - Changed nummerplader.json -> numberplates.json for clarity and updated references in codebase
 
 ### Documentation updates
+- Updated README.md to include changes
 - Added that i made the CHANGELOG.md file [changelog update]
 - Made CHANGELOG.md with a CHANGELOG.tpl.md template
 - Made README.md up-to-date with the latest changes in the repo
@@ -35,11 +36,12 @@ Changes that have been merged into the main branch but not yet included in a tag
 - Language switcher added; Danish, English, German
 
 ### Fixes
-- Fixed config.yml to display CHANGELOG.md title maps right
+- Fixed config.yml to display CHANGELOG.md title maps right [changelog update]
 - Forgot to commit Script.js for name update for JSON file
 
 ### Tests
 - CHANGELOG.md automation test [changelog update]
+
 
 
 

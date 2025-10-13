@@ -40,14 +40,20 @@ Users can enter a license plate abbreviation (for example, `HH`, `B`, or `M`) an
 ## Project Structure
 
 german-license-plates-register /<br/>
-├── [index.html](index.html) <br/>
-├── [style.css](style.css)  <br/>
-├── [script.js](script.js)  <br/>
-├── [README.md](README.md) <br/>
-├── [LICENSE](LICENSE) <br/>
-├── [server.js](server.js) <br/>
-├── [.gitignore](.gitignore) <br/>
-└── [numberplates.json](numberplates.json)  <br/>
+├── .chglog <br/>
+│   ├── CHANGELOG.tpl.md <br/>
+│   └── config.yml <br/>
+├── .gitignore <br/>
+├── CHANGELOG.md <br/>
+├── LICENSE <br/>
+├── README.md  <br/>
+├── index.html  <br/>
+├── numberplates.json <br/>
+├── script.js <br/>
+├── server.cert <br/>
+├── server.js <br/>
+├── server.key  <br/>
+└── style.css <br/>
 
 ---
 
@@ -94,7 +100,7 @@ german-license-plates-register /<br/>
 
 1. When the user clicks "Search", the function findCity() runs.
 
-2. The script loads the nummerplader.json file asynchronously.
+2. The script loads the numberplates.json file asynchronously.
 
 3. The user input is matched against the dataset.
 
@@ -104,9 +110,9 @@ Example:
 
 ```
 if (data[input]) {
-  result.textContent = ${input} stands for ${data[input]};
+  result.textContent = `${input} stands for ${data[input]}`;
 } else {
-  error.textContent = Unknown abbreviation. Please check your spelling.;
+  error.textContent = "Unknown abbreviation. Please check your spelling.";
 }
 ```
 ---
