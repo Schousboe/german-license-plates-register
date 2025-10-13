@@ -13,6 +13,21 @@ Repository: [https://github.com/Schousboe/german-license-plates-register](https:
 
 Changes that have been merged into the main branch but not yet included in a tagged release.
 
+### Fixes
+- Fix automatic release workflow to include changes from CHANGELOG.md
+
+
+
+
+
+[🔗 View latest changes on GitHub](https://github.com/Schousboe/german-license-plates-register/compare/v0.0.2-test...HEAD)
+
+---
+
+
+
+## 🚀 What's new in **v0.0.2-test** — _2025-10-13_
+
 ### Chores
 - Cleanup after "test: CHANGELOG.md automation test [changelog update]"
 
@@ -21,7 +36,7 @@ Changes that have been merged into the main branch but not yet included in a tag
 - Changed nummerplader.json -> numberplates.json for clarity and updated references in codebase
 
 ### Continuous Integration
-- Added automatic release workflow
+- Added automatic release workflow [changelog update]
 
 ### Documentation updates
 - Updated README.md to include changes
@@ -72,11 +87,9 @@ Changes that have been merged into the main branch but not yet included in a tag
 
 
 
-[🔗 View latest changes on GitHub](https://github.com/Schousboe/german-license-plates-register/compare/v1.1.0...HEAD)
+[🔗 View on GitHub](https://github.com/Schousboe/german-license-plates-register/releases/tag/v0.0.2-test)
 
 ---
-
-
 
 ## 🚀 What's new in **v1.1.0** — _2025-10-08_
 
