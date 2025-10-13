@@ -23,10 +23,10 @@ options:
 
       title_maps:
         feat: Features
-        fix: Bug Fixes
+        fix: Fixes
         perf: Performance Improvements
         refactor: Code Refactoring
-        docs: Documentation
+        docs: Documentation updates
         test: Tests
         chore: Chores
         build: Build System

@@ -13,9 +13,6 @@ Repository: [https://github.com/Schousboe/german-license-plates-register](https:
 
 Changes that have been merged into the main branch but not yet included in a tagged release.
 
-### Bug Fixes
-- Forgot to commit Script.js for name update for JSON file
-
 ### Chores
 - Cleanup after "test: CHANGELOG.md automation test [changelog update]"
 
@@ -23,8 +20,8 @@ Changes that have been merged into the main branch but not yet included in a tag
 - Deleted nummerplader.json for the numberplates.json
 - Changed nummerplader.json -> numberplates.json for clarity and updated references in codebase
 
-### Documentation
-- Added that i made the CHANGELOG.md file
+### Documentation updates
+- Added that i made the CHANGELOG.md file [changelog update]
 - Made CHANGELOG.md with a CHANGELOG.tpl.md template
 - Made README.md up-to-date with the latest changes in the repo
 - Added german as language in the 'Author' section in README.md
@@ -37,8 +34,13 @@ Changes that have been merged into the main branch but not yet included in a tag
 - Added HTTPS server setup and update documentation
 - Language switcher added; Danish, English, German
 
+### Fixes
+- Fixed config.yml to display CHANGELOG.md title maps right
+- Forgot to commit Script.js for name update for JSON file
+
 ### Tests
 - CHANGELOG.md automation test [changelog update]
+
 
 
 
