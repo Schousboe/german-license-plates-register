@@ -5,9 +5,6 @@ on:
     tags:
       - 'v*.*.*'
 
-permissions:
-  contents: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -17,58 +14,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Generate release body from Unreleased section
-        id: build
-        run: |
-          VERSION=${GITHUB_REF#refs/tags/}
-          DATE=$(date +'%Y-%m-%d')
-
-          awk '/##  Unreleased/,/^## /' CHANGELOG.md | sed '$d' > TMP_CHANGELOG.md
-
-          echo "[![Release](https://img.shields.io/badge/${VERSION}-blue.svg)] [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)" > RELEASE_BODY.md
-          echo "" >> RELEASE_BODY.md
-          echo "**Release date:** ${DATE}" >> RELEASE_BODY.md
-          echo "" >> RELEASE_BODY.md
-          echo "---" >> RELEASE_BODY.md
-          echo "" >> RELEASE_BODY.md
-          echo "# What's changed?" >> RELEASE_BODY.md
-          echo "" >> RELEASE_BODY.md
-
-          awk '
-            /^### / {section = $0; print ""; print section; next}
-            /^[^-]/ {next} # skip lines that do not start with a dash
-            {print $0}
-          ' TMP_CHANGELOG.md >> RELEASE_BODY.md
-
-          # --- Divider before file changes ---
-          echo "" >> RELEASE_BODY.md
-          echo "---" >> RELEASE_BODY.md
-          echo "" >> RELEASE_BODY.md
-          echo "# File Changes" >> RELEASE_BODY.md
-          echo "" >> RELEASE_BODY.md
-
-          # --- File-level changes ---
-          ADDED=$(git diff --name-only --diff-filter=A HEAD^ HEAD || true)
-          CHANGED=$(git diff --name-only --diff-filter=M HEAD^ HEAD || true)
-          DELETED=$(git diff --name-only --diff-filter=D HEAD^ HEAD || true)
-
-          if [ -n "$ADDED" ]; then
-            echo "## Added" >> RELEASE_BODY.md
-            echo "$ADDED" | sed 's/^/- /' >> RELEASE_BODY.md
-            echo "" >> RELEASE_BODY.md
-          fi
-
-          if [ -n "$CHANGED" ]; then
-            echo "## Changed" >> RELEASE_BODY.md
-            echo "$CHANGED" | sed 's/^/- /' >> RELEASE_BODY.md
-            echo "" >> RELEASE_BODY.md
-          fi
-
-          if [ -n "$DELETED" ]; then
-            echo "## Deleted" >> RELEASE_BODY.md
-            echo "$DELETED" | sed 's/^/- /' >> RELEASE_BODY.md
-            echo "" >> RELEASE_BODY.md
-          fi
+      - name: Generate release notes
+        run: ./scripts/generate-release-notes.sh
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
