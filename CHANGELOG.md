@@ -13,20 +13,20 @@ Repository: [https://github.com/Schousboe/german-license-plates-register](https:
 
 Changes that have been merged into the main branch but not yet included in a tagged release.
 
-### Fixes
-- Fix automatic release workflow to include changes from CHANGELOG.md
+### Tests
+- Testing release automation
 
 
 
 
 
-[🔗 View latest changes on GitHub](https://github.com/Schousboe/german-license-plates-register/compare/v0.0.2-test...HEAD)
+[🔗 View latest changes on GitHub](https://github.com/Schousboe/german-license-plates-register/compare/v0.0.3-test...HEAD)
 
 ---
 
 
 
-## 🚀 What's new in **v0.0.2-test** — _2025-10-13_
+## 🚀 What's new in **v0.0.3-test** — _2025-10-13_
 
 ### Chores
 - Cleanup after "test: CHANGELOG.md automation test [changelog update]"
@@ -54,6 +54,7 @@ Changes that have been merged into the main branch but not yet included in a tag
 - Language switcher added; Danish, English, German
 
 ### Fixes
+- Fix automatic release workflow to include changes from CHANGELOG.md [changelog update]
 - Fixed config.yml to display CHANGELOG.md title maps right [changelog update]
 - Forgot to commit Script.js for name update for JSON file
 
@@ -87,7 +88,8 @@ Changes that have been merged into the main branch but not yet included in a tag
 
 
 
-[🔗 View on GitHub](https://github.com/Schousboe/german-license-plates-register/releases/tag/v0.0.2-test)
+
+[🔗 View on GitHub](https://github.com/Schousboe/german-license-plates-register/releases/tag/v0.0.3-test)
 
 ---
 
