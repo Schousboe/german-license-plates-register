@@ -16,18 +16,6 @@ Changes that have been merged into the main branch but not yet included in a tag
 ### Fixes
 - Fixed badge's in release notes displaying weird
 
-
-
-
-
-[🔗 View latest changes on GitHub](https://github.com/Schousboe/german-license-plates-register/compare/v0.0.9-test...HEAD)
-
----
-
-
-
-## 🚀 What's new in **v0.0.9-test** — _2025-10-14_
-
 ### Chores
 - clean test files [changelog update]
 - Cleanup after "test: CHANGELOG.md automation test [changelog update]"
@@ -43,24 +31,6 @@ Changes that have been merged into the main branch but not yet included in a tag
 
 ### Tests
 - Testing release automation [changelog update]
-
-
-
-
-
-
-
-
-
-
-
-
-
-[🔗 View on GitHub](https://github.com/Schousboe/german-license-plates-register/releases/tag/v0.0.9-test)
-
----
-
-## 🚀 What's new in **v0.0.3-test** — _2025-10-13_
 
 ### Chores
 - Cleanup after "test: CHANGELOG.md automation test [changelog update]"
@@ -97,39 +67,6 @@ Changes that have been merged into the main branch but not yet included in a tag
 - Forgot to commit Script.js for name update for JSON file
 
 
-
-[🔗 View latest changes on GitHub](https://github.com/Schousboe/german-license-plates-register/compare/v0.0.3-test...HEAD)
-
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[🔗 View on GitHub](https://github.com/Schousboe/german-license-plates-register/releases/tag/v0.0.3-test)
-
----
 
 ## 🚀 What's new in **v1.1.0** — _2025-10-08_
 
