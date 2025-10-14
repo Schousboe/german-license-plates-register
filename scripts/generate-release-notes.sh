@@ -27,7 +27,7 @@ TESTS=$(echo "$COMMITS" | grep -E '^test:' | sed 's/^test: //') || true
 CI=$(echo "$COMMITS" | grep -E '^ci:' | sed 's/^ci: //') || true
 
 # --- Build release markdown ---
-BODY="[![Release](https://img.shields.io/badge/version-${TAG_NAME}-blue.svg)]"
+BODY="![Release](https://img.shields.io/badge/${TAG_NAME}-blue.svg)"
 BODY+=" [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)\n\n"
 BODY+="**Release date:** ${DATE}\n\n---\n\n# What's changed?\n\n"
 

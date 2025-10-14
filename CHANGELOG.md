@@ -13,12 +13,57 @@ Repository: [https://github.com/Schousboe/german-license-plates-register](https:
 
 Changes that have been merged into the main branch but not yet included in a tagged release.
 
+### Fixes
+- Fixed badge's in release notes displaying weird
+
+
+
+
+
+[🔗 View latest changes on GitHub](https://github.com/Schousboe/german-license-plates-register/compare/v0.0.9-test...HEAD)
+
+---
+
+
+
+## 🚀 What's new in **v0.0.9-test** — _2025-10-14_
+
 ### Chores
 - clean test files [changelog update]
 - Cleanup after "test: CHANGELOG.md automation test [changelog update]"
 
 ### Continuous Integration
-- Added a shell script that generates the release-notes body and changed release.yml to match
+- Added a shell script that generates the release-notes body and changed release.yml to match [changelog update]
+
+### Features
+- added local release preview test [changelog update]
+
+### Fixes
+- corrected markdown spacing [changelog update]
+
+### Tests
+- Testing release automation [changelog update]
+
+
+
+
+
+
+
+
+
+
+
+
+
+[🔗 View on GitHub](https://github.com/Schousboe/german-license-plates-register/releases/tag/v0.0.9-test)
+
+---
+
+## 🚀 What's new in **v0.0.3-test** — _2025-10-13_
+
+### Chores
+- Cleanup after "test: CHANGELOG.md automation test [changelog update]"
 
 ### Code Refactoring
 - Deleted nummerplader.json for the numberplates.json
