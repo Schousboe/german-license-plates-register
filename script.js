@@ -6,7 +6,7 @@ const translations = {
     button: "Søg",
     unknown: "Ukendt forkortelse. Har du stavet det rigtigt?",
     error: "Fejl ved indlæsning af data.",
-    resultTemplate: "{input} står for {city}"
+    resultTemplate: "{input} er forkortelsen brug for {city}"
   },
   en: {
     title: "German License Plates",
@@ -15,7 +15,7 @@ const translations = {
     button: "Search",
     unknown: "Unknown abbreviation. Check your spelling.",
     error: "Error loading data.",
-    resultTemplate: "{input} is the same as {city}"
+    resultTemplate: "{input} is abbreviation for {city}"
   },
   de: {
     title: "Deutsche Kennzeichen",
@@ -24,7 +24,7 @@ const translations = {
     button: "Suchen",
     unknown: "Unbekannte Abkürzung. Überprüfen Sie Ihre Rechtschreibung.",
     error: "Fehler beim Laden der Daten.",
-    resultTemplate: "{input} steht für {city}"
+    resultTemplate: "{input} ist die Abkürzung für {city}"
   }
 };
 
