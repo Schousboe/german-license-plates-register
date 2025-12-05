@@ -50,13 +50,13 @@ https.createServer(options, (req, res) => {
 
   fs.exists(filePath, (exists) => {
     if (!exists) {
-      console.error('ERROR: 404 NOT FOUND');
+      console.error(`ERROR: 404 NOT FOUND - ${filePath}`);
 
-      const notFoundPage = path.join(__dirname, '404.html');
+      const PUBLIC_DIR = path.join(__dirname, 'public');
+      const notFoundPage = path.join(PUBLIC_DIR, '404.html');
 
       fs.readFile(notFoundPage, (err, content) => {
         if (err) {
-          // If 404.html is missing or unreadable
           res.writeHead(404, { 'Content-Type': 'text/plain' });
           res.end('NOT_FOUND');
           return;
