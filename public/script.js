@@ -51,7 +51,7 @@ async function findCity() {
   error.textContent = "";
 
   try {
-    const response = await fetch("numberplates.json");
+    const response = await fetch("../data/numberplates.json");
     const data = await response.json();
 
     if (data[input]) {
