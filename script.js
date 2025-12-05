@@ -6,7 +6,7 @@ const translations = {
     button: "Søg",
     unknown: "Ukendt forkortelse. Har du stavet det rigtigt?",
     error: "Fejl ved indlæsning af data.",
-    resultTemplate: "{input} er forkortelsen brug for {city}"
+    resultTemplate: "{input} er forkortelsen for {city}"
   },
   en: {
     title: "German License Plates",
@@ -15,7 +15,7 @@ const translations = {
     button: "Search",
     unknown: "Unknown abbreviation. Check your spelling.",
     error: "Error loading data.",
-    resultTemplate: "{input} is abbreviation for {city}"
+    resultTemplate: "{input} is the abbreviation for {city}"
   },
   de: {
     title: "Deutsche Kennzeichen",

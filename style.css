@@ -57,10 +57,56 @@ body {
   text-align: center;
 }
 
-h1 {
+.heading {
   font-size: 1.6rem;
   margin-bottom: 1rem;
   color: #333;
+}
+
+.notFoundWrapper {
+  text-align: center;
+  padding: 2rem 3rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 420px;
+  width: 90%;
+  /* animation: pulse404 3s infinite ease-in-out; */
+}
+
+/* @keyframes pulse404 {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.035); }
+  100% { transform: scale(1); }
+}  */
+
+.notFoundHeading {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+  color: #222;
+}
+
+.notFoundParagraph {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.backHomeButton {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(120deg, #5C6BC0, #7986CB);
+  border-radius: 8px;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.backHomeButton:hover {
+  background: linear-gradient(120deg, #6370D6, #90A1E0);
+  transform: scale(1.03);
+  cursor: pointer;
 }
 
 input {
@@ -124,6 +170,11 @@ button:hover {
     left: 125%;
   }
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}  
 
 .result {
   margin-top: 1.5rem;

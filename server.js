@@ -2,10 +2,22 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
+// Secure certificate check
+function safeRead(file) {
+  try {
+    return fs.readFileSync(path.join(__dirname, file));
+  } catch (err) {
+    console.error('ERR_CERT_MISSING'); // short code for logs
+    console.error('Required TLS files not found.');
+    process.exit(1); // abort startup
+  }
+}
+
 const options = {
-  key: fs.readFileSync(path.join(__dirname, 'server.key')),
-  cert: fs.readFileSync(path.join(__dirname, 'server.cert')),
+  key: safeRead('server.key'),
+  cert: safeRead('server.cert'),
 };
+
 
 const PORT = 8443;
 
@@ -38,10 +50,26 @@ https.createServer(options, (req, res) => {
 
   fs.exists(filePath, (exists) => {
     if (!exists) {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('Not Found');
+      console.error('ERROR: 404 NOT FOUND');
+
+      const notFoundPage = path.join(__dirname, '404.html');
+
+      fs.readFile(notFoundPage, (err, content) => {
+        if (err) {
+          // If 404.html is missing or unreadable
+          res.writeHead(404, { 'Content-Type': 'text/plain' });
+          res.end('NOT_FOUND');
+          return;
+        }
+
+        res.writeHead(404, { 'Content-Type': 'text/html' });
+        res.end(content);
+      });
+
       return;
     }
+
+
     const ext = path.extname(filePath);
     const contentType = mimeTypes[ext] || 'application/octet-stream';
     fs.readFile(filePath, (err, content) => {
@@ -55,5 +83,5 @@ https.createServer(options, (req, res) => {
     });
   });
 }).listen(PORT, () => {
-  console.log(`HTTPS server running at https://localhost:${PORT}/`);
+  console.log(`HTTPS server starting at https://localhost:${PORT}/`);
 });
