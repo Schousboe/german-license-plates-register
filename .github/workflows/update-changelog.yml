@@ -1,0 +1,39 @@
+name: Update CHANGELOG
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install git-cliff
+        run: pip install git-cliff
+
+      - name: Generate CHANGELOG
+        run: git-cliff --config cliff.toml --output CHANGELOG.md
+
+      - name: Commit and push CHANGELOG
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add CHANGELOG.md
+          git commit -m "chore: update CHANGELOG.md [skip ci]" || exit 0
+          git push
