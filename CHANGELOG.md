@@ -7,16 +7,17 @@ All notable changes to this project will be documented in this file.
 ### Documentation
 
 - Add .release-it.json to structure and complete release-it
+- Use git-cliff instead of .chglog for changelog management for better flexibility and customization.
 
-### Other (unconventional)
+### Miscellaneous Tasks
 
 - Add CLI script to convert license plate text file to JSON
 
 ### Commit Statistics
 
-- 2 commit(s) contributed to the release.
+- 3 commit(s) contributed to the release.
 - 1 day(s) passed between the first and last commit.
-- 1 commit(s) parsed as conventional.
+- 3 commit(s) parsed as conventional.
 - 0 linked issue(s) detected in commits.
 - 1 day(s) passed between releases.
 
