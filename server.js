@@ -30,23 +30,28 @@ const mimeTypes = {
 
 https.createServer(options, (req, res) => {
   if (req.url === '/data') {
-    fs.readFile(path.join(__dirname, 'numberplates.json'), 'utf8', (err, data) => {
-      if (err) {
-        res.writeHead(500, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Failed to read JSON file' }));
-        return;
-      }
-      res.writeHead(200, { 'Content-Type': 'application/json' });
-      res.end(data);
-    });
-    return;
-  }
+  fs.readFile(path.join(__dirname, 'data', 'numberplates.json'), 'utf8', (err, data) => {
+    if (err) {
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ error: 'Failed to read JSON file' }));
+      return;
+    }
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(data);
+  });
+  return;
+}
+
+  const PUBLIC_DIR = path.join(__dirname, 'public');
 
   let filePath = req.url;
+
   if (filePath === '/' || filePath === '') {
     filePath = '/index.html';
   }
-  filePath = path.join(__dirname, filePath);
+
+  filePath = path.join(PUBLIC_DIR, filePath);
+
 
   fs.exists(filePath, (exists) => {
     if (!exists) {

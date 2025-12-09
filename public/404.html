@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 | German license plates register</title>
-    <link rel="stylesheet" href="public/style.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="notFoundWrapper">
+    <div class="notFoundWrapper">  
+        <div class="language-switcher">
+        <select id="languageDropdown" class="language-dropdown" onchange="setLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="da">Dansk</option>
+            <option value="de">Deutsch</option>
+        </select>
+        </div>
+
         <h1 class="notFoundHeader" align="center">Not found</h2>
         <p class="notFoundParagraph" align="center">Sorry, we couldn't find this place in our servers 🫠</p>
 
         <a href="/" class="backHomeButton">Back to home</a>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
