@@ -10,16 +10,21 @@ All notable changes to this project will be documented in this file.
 - Use git-cliff instead of .chglog for changelog management for better flexibility and customization.
 - Make README.md more readable and modern and update old info
 
+### Features
+
+- Add i18n on the 404 page and better project structure
+
 ### Miscellaneous Tasks
 
 - Add CLI script to convert license plate text file to JSON
 - Update CHANGELOG.md [skip ci]
+- Update CHANGELOG.md [skip ci]
 
 ### Commit Statistics
 
-- 5 commit(s) contributed to the release.
+- 7 commit(s) contributed to the release.
 - 4 day(s) passed between the first and last commit.
-- 5 commit(s) parsed as conventional.
+- 7 commit(s) parsed as conventional.
 - 0 linked issue(s) detected in commits.
 - 4 day(s) passed between releases.
 
