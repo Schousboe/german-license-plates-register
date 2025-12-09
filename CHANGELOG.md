@@ -8,18 +8,20 @@ All notable changes to this project will be documented in this file.
 
 - Add .release-it.json to structure and complete release-it
 - Use git-cliff instead of .chglog for changelog management for better flexibility and customization.
+- Make README.md more readable and modern and update old info
 
 ### Miscellaneous Tasks
 
 - Add CLI script to convert license plate text file to JSON
+- Update CHANGELOG.md [skip ci]
 
 ### Commit Statistics
 
-- 3 commit(s) contributed to the release.
-- 1 day(s) passed between the first and last commit.
-- 3 commit(s) parsed as conventional.
+- 5 commit(s) contributed to the release.
+- 4 day(s) passed between the first and last commit.
+- 5 commit(s) parsed as conventional.
 - 0 linked issue(s) detected in commits.
-- 1 day(s) passed between releases.
+- 4 day(s) passed between releases.
 
 ## 1.2.0 - 2025-12-05
 
