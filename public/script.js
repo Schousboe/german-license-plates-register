@@ -91,3 +91,10 @@ async function findCity() {
     console.error(err);
   }
 }
+
+document.getElementById('input')?.addEventListener('keydown', event => {
+  if (event.key === 'Enter') {
+    event.preventDefault()
+    findCity()
+  }
+})
