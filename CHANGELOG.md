@@ -23,12 +23,17 @@ All notable changes to this project will be documented in this file.
 - Update CHANGELOG.md [skip ci]
 - Update CHANGELOG.md [skip ci]
 - Update CHANGELOG.md [skip ci]
+- Update CHANGELOG.md [skip ci]
+
+### Refactor
+
+- Rename project to CityByPlate
 
 ### Commit Statistics
 
-- 11 commit(s) contributed to the release.
+- 13 commit(s) contributed to the release.
 - 19 day(s) passed between the first and last commit.
-- 11 commit(s) parsed as conventional.
+- 13 commit(s) parsed as conventional.
 - 0 linked issue(s) detected in commits.
 - 19 day(s) passed between releases.
 
