@@ -51,9 +51,9 @@ Users can enter a license plate abbreviation (for example, `HH`, `B`, or `M`) an
 ├── data 
 │   ├── numberplates.json 
 │   └── numberplates.txt 
-├── index.html 
 ├── public 
-│   ├── 404.html 
+│   ├── 404.html
+│   ├── Index.html
 │   ├── script.js 
 │   └── style.css 
 ├── scripts 
@@ -105,7 +105,7 @@ Users can enter a license plate abbreviation (for example, `HH`, `B`, or `M`) an
 
 ## How It Works
 
-1. When the user clicks "Search", the function `findCity()` runs.
+1. When the user clicks "Search", the function `findCity` runs.
 
 2. The script loads the `numberplates.json` file asynchronously.
 
