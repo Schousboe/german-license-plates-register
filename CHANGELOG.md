@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Add .release-it.json to structure and complete release-it
 - Use git-cliff instead of .chglog for changelog management for better flexibility and customization.
 - Make README.md more readable and modern and update old info
+- Move `index.html` into the public folder in file tree in README
 
 ### Features
 
@@ -21,14 +22,15 @@ All notable changes to this project will be documented in this file.
 - Update CHANGELOG.md [skip ci]
 - Update CHANGELOG.md [skip ci]
 - Update CHANGELOG.md [skip ci]
+- Update CHANGELOG.md [skip ci]
 
 ### Commit Statistics
 
-- 9 commit(s) contributed to the release.
-- 17 day(s) passed between the first and last commit.
-- 9 commit(s) parsed as conventional.
+- 11 commit(s) contributed to the release.
+- 19 day(s) passed between the first and last commit.
+- 11 commit(s) parsed as conventional.
 - 0 linked issue(s) detected in commits.
-- 17 day(s) passed between releases.
+- 19 day(s) passed between releases.
 
 ## 1.2.0 - 2025-12-05
 
