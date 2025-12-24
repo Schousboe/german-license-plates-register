@@ -69,9 +69,9 @@ Users can enter a license plate abbreviation (for example, `HH`, `B`, or `M`) an
 1. **Clone the repository**
    
    ```bash
-   git clone https://github.com/Schousboe/german-license-plates-register.git
+   git clone https://github.com/Schousboe/CityByPlate.git
    &&
-   cd german-license-plates-register
+   cd CityByPlate
    ```
    
 2. **Generate a SSL certificate (Only the first time)**
